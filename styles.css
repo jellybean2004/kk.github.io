@@ -1,0 +1,364 @@
+/*
+color palette
+#0B0C10
+#1F2833
+#C5C6C7
+#66FCF1
+#45A29E
+*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #C5C6C7;
+    text-shadow: #000 .5px .5px;
+}
+
+
+/*links*/
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #45A29E;
+}
+
+.wrapper {
+    background-color : #0B0C10;    /* with just bg img, there is a white border */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    background-image: url(background.svg);
+    background-position-x: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    background-repeat: repeat;
+}
+
+
+.foreground {
+    width: 100%;
+    backdrop-filter: blur(0px);
+}
+
+/*navigation bar*/
+
+.nav-bar {
+    position: absolute;
+    margin-top: -1.2em;
+    margin-left: 1em
+}
+
+.menu-icon {
+    float: left;
+}
+
+.menu-icon-bar p {
+    border-top: solid;
+    border-color: #66FCF1;
+    border-width: 4px;
+    width: 25em;
+    margin-top: 4em;
+    margin-right: 15em;
+    font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+    animation: fall 1.5s;
+}
+
+@keyframes fall {
+    0% {
+        margin-top: -20em;
+        transform: rotate(10deg);
+    }
+
+    50% {
+        margin-top: -20em;
+        transform: rotate(90deg);
+    }
+}
+
+.menu-icon-bar p:hover {
+    border-color: #45A29E;
+}
+
+.menu-text {
+    float: right;
+    margin-top: 3px;
+    animation: slide-in 2s;
+}
+
+@keyframes slide-in {
+    0% {
+        margin-left: -2em;
+        transform: rotate(10deg);
+    }
+
+    50% {
+        margin-left: -.8em;
+        transform: rotate(-10deg);
+    }
+}
+
+.menu-text h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #66FCF1;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.menu-text h2:hover {
+    color: #45A29E;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 1.5em;
+    padding-top: 1em;
+    z-index: 1;
+    width: 8em;
+    text-transform: capitalize;
+}
+
+.dropdown-content a {
+    backdrop-filter: blur(2px);
+    color: #C5C6C7;
+    padding: .1em 1em;
+    display: block;
+    animation: drop .4s;
+}
+
+@keyframes drop {
+    0%{
+        margin-top: -1.5em;
+        transform: rotate(20deg);
+    }    
+}
+
+.dropdown-content a:hover {
+    color: #45A29E;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*main portion*/
+
+.main {
+    margin-top: 2em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title-home h1 {
+    text-align: center;
+    padding-top: 2em ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 75px;
+    font-weight: 100;
+    color: #66FCF1;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    animation: appear1 2s;
+}
+
+@keyframes appear1 {
+    0% {
+    }
+    
+    50% {
+        letter-spacing: .1em;
+    }
+}
+
+#intro-home p {
+    padding-top: 3em;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+
+button {
+    display: flex;
+    margin: 3em auto;
+    padding: .8em 1.5em;
+    background: rgba(0, 0, 0, 0);
+    border-color: #66FCF1;
+    border-width: 1px;
+    color: #66FCF1;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer {
+    text-align: center;
+    margin: 8em;
+    font-size: 10px;
+}
+
+/*blogs page*/
+
+.wrapperb {
+    background-color : #0B0C10;    /* with just bg img, there is a white border */
+    position: absolute;
+    width: 100%;
+}
+
+#title-blogs h1 {
+    text-align: center;
+    padding-top: 1em ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #66FCF1;
+    letter-spacing: .2em;
+    width: 80%;
+    margin: auto;
+    border-bottom-style: solid;
+    border-color: #45A29E;
+    border-bottom-width: 1px;
+    position: relative;
+    animation: upward 2s;
+}
+
+
+@keyframes upward {
+    0% {
+        font-size: 0;
+        margin-bottom: -1em;
+    }  
+
+    25% {
+        font-size: 0;
+    }
+}
+
+#post-grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#post {
+    margin: .2em;
+    border-style: groove;
+    border-width: 1px;
+    border-color: #0b0c10;
+    padding: .2em;
+    height: auto;
+    overflow: hidden;
+}
+
+#post-title h3 {
+    text-transform: capitalize;
+    text-align: center;
+    color: #66FCF1;
+    font-size: 15px;
+}
+
+#blurb {
+    margin-top: .5em;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*feedback page*/
+
+#title-feedback h1 {
+    text-align: center;
+    padding-top: 1em ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #66FCF1;
+    letter-spacing: .1em;
+    width: 80%;
+    margin: auto;
+    border-bottom-style: solid;
+    border-color: #45A29E;
+    border-bottom-width: 1px;
+    position: relative;
+    animation: upward 2s;
+}
+
+#intro-feedback p {
+    padding-top: 3em;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+    margin-top: 1em;
+}
+
+#name, #email, #message {
+    padding: .5em;
+    width: 100%;
+    margin-bottom: .5em;
+    background-color: #0B0C10;
+    border-style: groove;
+    border-color: #C5C6C7;
+    border-width: 1px;
+    font-family: serif;
+}
+
+#message {
+    height: 10em;
+    resize: none;
+}
+
+#submit {
+    display: flex;
+    justify-content: center;
+}
+
+#submit-button {
+    padding: .2em .3em;
+    background: rgba(0, 0, 0, 0);
+    border-color: #0B0C10;
+    border-width: 1px;
+    color: #66FCF1;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*responsive*/
+
+@media(max-width: 650px){
+
+	#title-home h1 {
+        padding-top: 3em;
+        font-size: 50px;
+    }
+
+    #post-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #post {
+        margin-bottom: 1em;
+        height: 8em;
+    }
+
+    
+form {
+    width: 80%;
+}
+
+}

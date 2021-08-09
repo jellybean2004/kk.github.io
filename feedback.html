@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feedback</title>
+
+    <link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+    
+    <div class="wrapper">
+
+        <div class="background"></div>
+
+        <div class="foreground">
+
+            <div class="nav-bar">
+
+                <div class="dropdown">
+
+                    <div class="menu-icon">
+                        <div class="menu-icon-bar"><p>aaa</p></div>
+                        <div class="menu-icon-bar"><p>aaa</p></div>
+                        <div class="menu-icon-bar"><p>aaa</p></div>
+                        
+                    </div>
+
+                    <div class="menu-text"><h2>menu</h2></div>
+
+                    <div class="dropdown-content">
+                        <a href="index.html">home</a>
+                        <a href="blogs.html">blogs</a>
+                        <a href="feedback.html">feedback</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main">
+
+                <div id="title-feedback"> <h1>feedback</h1> </div>
+
+                <div id="intro-feedback">
+                    <p>Please fill in the form below to contact us.</p>
+                </div>
+
+                <form id="feedback-form" autocomplete="on" action="mailto:sujayashr18@gmail.com" method="POST" enctype="multipart/form-data">
+                    <input type="text" id="name" name="name" placeholder="name">
+                    <br>
+                    <input type="text" id="email" name="email" placeholder="email">
+                    <br>
+                    <textarea name="message" id="message" placeholder="type your message here"></textarea>
+                    <br>
+                    <div id="submit">
+                        <input type="submit" value="Submit" id="submit-button">
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="footer"> <h2>Copyright © 2021, Kurakaani™</h2> </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
